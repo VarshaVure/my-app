@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head><title>My App</title></head>
+<body>
+  <h1>Welcome{% if user.is_authenticated %}, {{ user.username }}{% endif %}!</h1>
+
+  <h2>Sign up</h2>
+  <form action="/signup" method="POST">
+    <input name="username" placeholder="username" required>
+    <input name="password" type="password" placeholder="password" required>
+    <button type="submit">Sign up</button>
+  </form>
+
+  <h2>Log in</h2>
+  <form action="/login" method="POST">
+    <input name="username" placeholder="username" required>
+    <input name="password" type="password" placeholder="password" required>
+    <button type="submit">Log in</button>
+  </form>
+</body>
+</html>
